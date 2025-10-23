@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV TEMIR Abdullah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Écran de démarrage -->
+  <div id="start-screen" class="start-section">
+    <h1>Bienvenue sur mon CV</h1>
+    <p>Découvrez mon parcours professionnel</p>
+    <button id="start-button">Démarrer la présentation</button>
+  </div>
+
+  <div id="cv-layout" class="cv-layout">
+
+    <!-- Barre latérale -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="photo.jpeg" alt="Ma photo" class="profile-photo">
+        <p class="logo-text">TEMIR Abdullah</p>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li id="home-button">
+            <img src="icons/home.svg" alt="Accueil" class="icon">
+            <p>ACCUEIL</p>
+          </li>
+          <li class="nav-item" data-target="presentation">
+            <img src="icons/user.svg" alt="Présentation" class="icon">
+            <p>PRÉSENTATION</p>
+          </li>
+          <li class="nav-item" data-target="parcours">
+            <img src="icons/graduation.svg" alt="Parcours" class="icon">
+            <p>PARCOURS</p>
+          </li>
+          <li class="nav-item" data-target="experiences">
+            <img src="icons/briefcase.svg" alt="Expériences" class="icon">
+            <p>EXPÉRIENCES</p>
+          </li>
+          <li class="nav-item" data-target="competences">
+            <img src="icons/star.svg" alt="Compétences" class="icon">
+            <p>COMPÉTENCES</p>
+          </li>
+          <li class="nav-item" data-target="contact">
+            <img src="icons/mail.svg" alt="Contact" class="icon">
+            <p>CONTACT</p>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Contenu principal -->
+    <main class="main-content">
+      <section id="presentation" class="section">
+        <p>Abdullah TEMIR 18 ans</p>
+        <!-- Contenu de la présentation -->
+      </section>
+      <section id="parcours" class="section">
+        <p>- Lycée Arbez Carme <br>
+        - Epitech Lyon</p>
+        <!-- Contenu du parcours -->
+      </section>
+      <section id="experiences" class="section">
+        <p>- Stages :<br>
+        - Experiences professionels :</p>
+        <!-- Contenu des expériences -->
+      </section>
+      <section id="competences" class="section">
+        <!-- Contenu des compétences -->
+         <p>- HTML/Jvascript<br>
+        - Personnalités :</p>
+      </section>
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <form id="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" required placeholder="Votre nom complet">
+          </div>
+          <div class="form-group">
+            <label for="email">Adresse email</label>
+            <input type="email" id="email" name="email" required placeholder="Votre email">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Votre message"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Envoyer</button>
+        </form>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- Script JavaScript -->
+  <script>
+    // Récupère les éléments du DOM
+    var startScreen = document.getElementById('start-screen');
+    var cvLayout    = document.getElementById('cv-layout');
+    var startButton = document.getElementById('start-button');
+    var homeButton  = document.getElementById('home-button');
+    var navItems    = document.querySelectorAll('.nav-item');
+    var sections    = document.querySelectorAll('.section');
+
+    // Affiche l'écran de démarrage et cache le CV
+    function showStartScreen() {
+      startScreen.style.display = 'flex';
+      cvLayout.style.display    = 'none';
+    }
+
+    // Affiche le CV et masque l'écran de démarrage
+    function showCVLayout() {
+      startScreen.style.display = 'none';
+      cvLayout.style.display    = 'flex';
+      showSection('presentation');
+    }
+
+    // Affiche la section de contenu correspondant à l'id
+    function showSection(id) {
+      for (var i = 0; i < sections.length; i++) {
+        var section = sections[i];
+        if (section.id === id) {
+          section.style.display = 'block';
+        } else {
+          section.style.display = 'none';
+        }
+      }
+    }
+
+    // Initialisation : affiche l'écran de démarrage
+    showStartScreen();
+
+    // Événements clic
+    startButton.addEventListener('click', showCVLayout);
+    homeButton.addEventListener('click', showStartScreen);
+
+    for (var j = 0; j < navItems.length; j++) {
+      navItems[j].addEventListener('click', function() {
+        var targetId = this.getAttribute('data-target');
+        showCVLayout();
+        showSection(targetId);
+      });
+    }
+  </script>
+
+</body>
+</html>
