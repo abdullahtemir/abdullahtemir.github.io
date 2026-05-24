@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Abdullah TEMIR</title>
+    <meta name="description" content="Portfolio d'Abdullah TEMIR, étudiant en Bachelor Informatique à EPITECH Lyon. Passionné par le développement web, la cybersécurité et le hardware.">
+    <meta name="author" content="Abdullah TEMIR">
+    <meta name="keywords" content="portfolio, développeur web, EPITECH, cybersécurité, HTML, CSS, JavaScript, Python">
+    <meta property="og:title" content="Portfolio | Abdullah TEMIR">
+    <meta property="og:description" content="Étudiant en Bachelor à EPITECH Lyon — développement web, cybersécurité, hardware.">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Écran de chargement -->
+    <div id="loading-screen">
+        <div class="loader-content">
+            <span class="loader-logo">AT.</span>
+            <div class="loader-bar-track">
+                <div class="loader-fill"></div>
+            </div>
+            <p class="loader-text">Initialisation...</p>
+        </div>
+    </div>
+
+    <!-- Curseur personnalisé -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Barre de progression -->
+    <div id="scroll-progress"></div>
+
+    <header>
+        <nav>
+            <a href="#home">Accueil</a>
+            <a href="#about">À propos</a>
+            <a href="#services">Compétences</a>
+            <a href="#home" class="logo">AT.</a> 
+            <a href="#portfolio">Apprentissage</a>
+            <a href="#client">Projets</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Basculer le mode sombre">🌙</button>
+    </header>
+
+    <main>
+        <!-- SECTION ACCUEIL -->
+        <section id="home" class="section-home">
+            <div class="hero-content">
+                <h1>Abdullah TEMIR</h1>
+                <p>Étudiant en Bachelor à <strong>EPITECH Lyon</strong><span class="hero-catchphrase">&lt; Passionné par le code &gt;</span></p>
+                <div class="hero-buttons">
+                    <a href="#client" class="btn-portfolio">Voir mes projets</a>
+                    <a href="TEMIR_Abdullah_CV.pdf" class="btn-contact" download="TEMIR_Abdullah_CV.pdf">Télécharger mon CV</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="Picture.png" alt="Abdullah TEMIR" style="mix-blend-mode: multiply; border-radius: 10px;">
+            </div>
+        </section>
+
+        <!-- SECTION À PROPOS -->
+        <section id="about" class="section-about">
+            <div class="about-header">
+                <h2 class="section-title">À propos de moi</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-col reveal">
+                    <h3>Mon Parcours</h3>
+                    
+                    <div class="timeline">
+                        <!-- Étape 1 : Epitech (La plus récente en haut) -->
+                        <div class="timeline-item reveal">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Epitech Lyon (2025-2028)</h4>
+                                <span class="timeline-date">Actuellement</span>
+                                <p>Spécialisation en programmation.</p>
+                            </div>
+                        </div>
+
+                        <!-- Étape 2 : BAC Pro -->
+                        <div class="timeline-item reveal">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Lycée Arbez Carme (2021-2024)</h4>
+                                <span class="timeline-date">Diplômé en 2024</span>
+                                <p>BAC Pro Cybersécurité (CIEL). Développement d'une grande autonomie.</p>
+                            </div>
+                        </div>
+
+                        <!-- Étape 3 : Brevet -->
+                        <div class="timeline-item reveal">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Collège Xavier Bichat, Nantua (2017-2021)</h4>
+                                <span class="timeline-date">Diplômé en 2021 · Mention Bien</span>
+                                <p>Brevet des collèges. Premiers pas en informatique et développement du goût pour les sciences.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="about-col img-wrapper reveal">
+                    <img src="Photo Abdullah.png" alt="Abdullah TEMIR">
+                </div>
+                <div class="about-col reveal">
+    <h3>Expériences Clés</h3>
+    <div class="timeline">
+        <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h4>Shopytech Destockeur</h4>
+                <span class="timeline-duration">2022 – 2024 · 12 semaines cumulées</span>
+                <p>Diagnostic, réparation et micro-soudure de PC, consoles et appareils électroniques. Vente de matériel informatique aux clients.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h4>Chalon Megard</h4>
+                <span class="timeline-duration">Sept. – Oct. 2023 · 4 semaines</span>
+                <p>Câblage de baies de brassage, inventaire du parc informatique sur Excel, collecte et démontage de PC en fin de vie.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h4>L'Atelier</h4>
+                <span class="timeline-duration">Mai – Juil. 2022 · 6 semaines</span>
+                <p>Installation de machines virtuelles (VirtualBox + Winimage), câblage de distributeurs automatiques.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h4>Point Frais</h4>
+                <span class="timeline-duration">Nov. – Déc. 2024</span>
+                <p>Vendeur en Boucherie, Gestion des stocks et mise en rayon.</p>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </section>
+
+        <hr class="section-separator">
+
+        <!-- SECTION COMPÉTENCES -->
+        <section id="services" class="section-services">
+            <h2 class="section-title">Mes Compétences</h2>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <h3>Développement Web</h3>
+                    <p>HTML, CSS, JavaScript, Python, Bash, SQL — avec Git pour le versioning de chaque projet.</p>
+                </div>
+                <div class="service-card reveal">
+                    <h3>Maintenance & Hardware</h3>
+                    <p>Diagnostic, réparation et micro-soudure de PC, consoles et appareils électroniques. Câblage réseau et gestion de parc.</p>
+                </div>
+                <div class="service-card reveal">
+                    <h3>Systèmes & Cybersécurité</h3>
+                    <p>Linux, Virtualisation (VirtualBox), notions de sécurité réseau, diagnostic système et gestion des accès (BAC Pro CIEL).</p>
+                </div>
+                <div class="service-card reveal">
+                    <h3>Langues</h3>
+                    <p>Français & Turc (courant), Anglais (indépendant), Italien (débutant).</p>
+                </div>
+            </div>
+
+            <!-- Badges technologiques animés -->
+            <div class="tech-badges-wrap">
+                <span class="tech-badge badge-html">HTML</span>
+                <span class="tech-badge badge-css">CSS</span>
+                <span class="tech-badge badge-js">JavaScript</span>
+                <span class="tech-badge badge-python">Python</span>
+                <span class="tech-badge badge-bash">Bash / Linux</span>
+                <span class="tech-badge badge-git">Git</span>
+                <span class="tech-badge badge-sql">SQL</span>
+                <span class="tech-badge badge-secu">Cybersécurité</span>
+                <span class="tech-badge badge-hw">Hardware</span>
+                <span class="tech-badge badge-vbox">VirtualBox</span>
+            </div>
+        </section>
+
+        <!-- SECTION SOFT SKILLS -->
+        <section class="section-softskills">
+            <h2 class="section-title">Savoir-être</h2>
+            <div class="marquee-wrapper">
+                <!-- Rangée 1 : défilement gauche, tags pleins -->
+                <div class="marquee-row">
+                    <div class="marquee-track left">
+                        <span class="skill-tag filled">Autonomie</span>
+                        <span class="skill-tag filled">Rigueur</span>
+                        <span class="skill-tag filled">Travail en Équipe</span>
+                        <span class="skill-tag filled">Dépannage Informatique</span>
+                        <span class="skill-tag filled">Maintenance Matérielle</span>
+                        <span class="skill-tag filled">Curiosité</span>
+                        <span class="skill-tag filled">Adaptabilité</span>
+                        <span class="skill-tag filled">Résolution de Problèmes</span>
+                        <!-- Duplicats pour la boucle continue -->
+                        <span class="skill-tag filled">Autonomie</span>
+                        <span class="skill-tag filled">Rigueur</span>
+                        <span class="skill-tag filled">Travail en Équipe</span>
+                        <span class="skill-tag filled">Dépannage Informatique</span>
+                        <span class="skill-tag filled">Maintenance Matérielle</span>
+                        <span class="skill-tag filled">Curiosité</span>
+                        <span class="skill-tag filled">Adaptabilité</span>
+                        <span class="skill-tag filled">Résolution de Problèmes</span>
+                    </div>
+                </div>
+                <!-- Rangée 2 : défilement droite, tags contour -->
+                <div class="marquee-row">
+                    <div class="marquee-track right">
+                        <span class="skill-tag outline">Esprit Analytique</span>
+                        <span class="skill-tag outline">Polyvalence</span>
+                        <span class="skill-tag outline">Force de Proposition</span>
+                        <span class="skill-tag outline">Précision</span>
+                        <span class="skill-tag outline">Sens du Service</span>
+                        <span class="skill-tag outline">Efficacité</span>
+                        <span class="skill-tag outline">Écoute</span>
+                        <span class="skill-tag outline">Implication</span>
+                        <!-- Duplicats pour la boucle continue -->
+                        <span class="skill-tag outline">Esprit Analytique</span>
+                        <span class="skill-tag outline">Polyvalence</span>
+                        <span class="skill-tag outline">Force de Proposition</span>
+                        <span class="skill-tag outline">Précision</span>
+                        <span class="skill-tag outline">Sens du Service</span>
+                        <span class="skill-tag outline">Efficacité</span>
+                        <span class="skill-tag outline">Écoute</span>
+                        <span class="skill-tag outline">Implication</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION Apprentissage -->
+        <section id="portfolio" class="section-services" style="background: #f9f9f9;">
+            <h2 class="section-title text-center">Mon Apprentissage</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p>Cette année à Epitech m'a permis de franchir un cap décisif : passer du hardware pur au développement logiciel professionnel. La pédagogie active d'Epitech m'a appris à chercher des solutions par moi-même, à lire de la documentation technique et à itérer rapidement sur mes projets.</p>
+                <br>
+                <p><strong>Versioning & Collaboration :</strong> Maîtrise de Git et GitHub pour gérer l'historique de mes projets, travailler en branches et collaborer efficacement avec d'autres développeurs. Un réflexe devenu naturel pour chaque nouveau projet.</p>
+                <br>
+                <p><strong>Développement Web Front-End :</strong> Consolidation de mes bases HTML/CSS/JavaScript à travers des projets concrets — ce portfolio, E-Todo, Product Design. Apprentissage des bonnes pratiques : structure sémantique, responsivité, accessibilité et SEO.</p>
+                <br>
+                <p><strong>Systèmes & Outils :</strong> Approfondissement de Linux et des scripts Bash pour automatiser des tâches et gérer l'environnement de développement. Mon background en cybersécurité (BAC Pro CIEL) m'aide à penser la sécurité dès la conception.</p>
+                <br>
+                <p>Ma progression la plus significative ? Comprendre que la clarté du code importe autant que son fonctionnement — un programme qui marche mais qu'on ne peut pas relire n'est qu'un bug en attente.</p>
+            </div>
+        </section>
+
+        <!-- SECTION PROJETS (Grille 2x2) -->
+        <section id="client" class="section-projects">
+            <h2 class="section-title text-center">Mes Projets</h2>
+            <div class="projects-2x2-grid">
+                <div class="project-item reveal" onclick="openModal('modal1')">
+                    <img src="E-todo.png" alt="E-Todo Project">
+                    <div class="project-overlay"><span>E-Todo Project</span></div>
+                </div>
+                <div class="project-item reveal" onclick="openModal('modal2')">
+                    <img src="greenstreet.png" alt="Product Design Project">
+                    <div class="project-overlay"><span>Product Design Project</span></div>
+                </div>
+                <div class="project-item reveal" onclick="openModal('modal3')">
+                    <img src="Yowl.png" alt="Yowl Project">
+                    <div class="project-overlay"><span>YOWL Project</span></div>
+                </div>
+                <div class="project-item reveal" onclick="openModal('modal4')">
+                    <img src="Eliza.png" alt="Eliza Project">
+                    <div class="project-overlay"><span>Eliza Project</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FENÊTRES MODALES -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h2>E-Todo Project</h2>
+                <div class="modal-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                <p>Application web de gestion de tâches réalisée en HTML, CSS et JavaScript. Elle permet d'ajouter, supprimer et cocher des tâches, avec une sauvegarde automatique sur le navigateur (LocalStorage).</p>
+                <p>Ce projet m'a permis de solidifier mes bases en JavaScript pur et en gestion des événements utilisateur, sans dépendre de bibliothèques externes.</p>
+                <button class="btn-view-image" data-img="E-todo.png" onclick="openLightbox(this.dataset.img)">↗ Voir l'image en grand</button>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h2>Product Design Project</h2>
+                <div class="modal-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                <p>Une application web au design soigné et fluide qui permet de localiser facilement les infrastructures publiques environnantes (parcs, pistes cyclables, etc.).</p>
+                <p>Ce projet m'a sensibilisé à l'éco-conception web, en apprenant à optimiser le code pour limiter l'empreinte carbone liée au chargement du site.</p>
+                <button class="btn-view-image" data-img="greenstreet.png" onclick="openLightbox(this.dataset.img)">↗ Voir l'image en grand</button>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <h2>YOWL Project</h2>
+                <div class="modal-tags"><span>HTML</span><span>Documentation</span><span>JavaScript</span></div>
+                <p>Application web conçue pour faciliter la communication et l'entraide entre les étudiants d'Epitech, où qu'ils soient dans le monde.</p>
+                <p>Idée née durant le hackathon inter-campus "Hack and Juice", ce projet répond à un besoin concret : connecter et faire collaborer les étudiants de différentes villes sur des projets communs.</p>
+                <button class="btn-view-image" data-img="Yowl.png" onclick="openLightbox(this.dataset.img)">↗ Voir l'image en grand</button>
+            </div>
+        </div>
+
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal4')">&times;</span>
+                <h2>Eliza Project</h2>
+                <div class="modal-tags"><span>Python</span><span>JavaScript</span><span>HTML</span></div>
+                <p>Développement de bots capables d'analyser les messages reçus et de détecter automatiquement s'il s'agit d'une tentative d'arnaque ou de fraude.</p>
+                <p>Ce projet m'a permis de déployer ces outils de sécurité sur des plateformes très utilisées comme Discord, Slack et Telegram, pour des profils particuliers ou professionnels.</p>
+                <button class="btn-view-image" data-img="Eliza.png" onclick="openLightbox(this.dataset.img)">↗ Voir l'image en grand</button>
+            </div>
+        </div>
+
+        <!-- Lightbox plein écran -->
+        <div id="lightbox" onclick="closeLightbox()">
+            <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fermer">&times;</button>
+            <img id="lightbox-img" src="" alt="Aperçu du projet">
+        </div>
+
+        <!-- SECTION CONTACT -->
+        <section id="contact" class="section-contact">
+    <h2 class="section-title text-center">Me Contacter</h2>
+
+    <div class="contact-container reveal">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <p>📍 01130 Nantua</p>
+            <p>📧 temirabdullah04@gmail.com</p>
+            <p>📞 07 69 06 02 75</p>
+        </div>
+
+        <form id="contact-form" action="https://formspree.io/f/xlgvwekd" method="POST" class="minimal-form">
+            <input type="text" name="prenom" placeholder="Prénom" required>
+
+            <input type="text" name="nom" placeholder="Nom" required>
+
+            <div class="full-width">
+                <input type="email" name="email" placeholder="Adresse Email" required>
+            </div>
+
+            <div class="full-width">
+                <input type="text" name="_subject" placeholder="Objet du message" required>
+            </div>
+
+            <div class="full-width">
+                <textarea name="message" placeholder="Votre message ici..." required></textarea>
+            </div>
+
+            <div class="btn-container">
+                <button type="submit" class="btn-submit">Envoyer</button>
+            </div>
+        </form>
+        <p id="form-success" class="form-feedback form-success hidden">Message envoyé ! Je vous réponds très vite.</p>
+        <p id="form-error"   class="form-feedback form-error   hidden">Erreur lors de l'envoi — contactez-moi directement : temirabdullah04@gmail.com</p>
+    </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+    <p class="footer-funny">"Je cherche activement des bugs à résoudre. Si vous en avez un — projet, stage, collaboration — je suis votre homme."</p>
+    <div class="footer-links">
+        <button class="copy-email" onclick="copyEmail(this)" aria-label="Copier l'adresse email">
+            temirabdullah04@gmail.com
+            <span class="copy-tooltip">Copié !</span>
+        </button>
+        <a href="https://github.com/AbdullahTemir" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/abdullahtemir" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="footer-copy">© 2026 Abdullah TEMIR &mdash; Fait avec passion</p>
+</footer>
+
+<button id="back-to-top" aria-label="Retour en haut">&#8593;</button>
+
+<script src="script.js"></script>
+</body>
+</html>
